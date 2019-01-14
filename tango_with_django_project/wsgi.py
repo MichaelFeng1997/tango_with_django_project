@@ -13,4 +13,9 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tango_with_django_project.settings")
 
+<<<<<<< HEAD
 application = get_wsfgfdgfgs g
+=======
+application = get_wsgi_application()
+#[[[[ioioi
+>>>>>>> 7649a493e03ec0e339afe8733deb7d0042185775
