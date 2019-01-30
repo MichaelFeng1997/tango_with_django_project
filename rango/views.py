@@ -70,7 +70,9 @@ def index(request):
     return response
 
 def about(request):
+    visitor_cookie_handler(request)
 
+    response = render(request, 'rango/about.html', context = {'visits':request.session['visits']})
     if request.session.test_cookie_worked():
         print("TEST COOKIE WORKED!")
         request.session.delete_test_cookie()
@@ -80,7 +82,7 @@ def about(request):
     print(request.method)
     #print out the user name, if no one is logged in it prints 'AnonymousUser'
     print(request.user)
-    return render(request, 'rango/about.html',{})
+    return response
 
 
 def add_category(request):
